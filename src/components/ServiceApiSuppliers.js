@@ -28,6 +28,7 @@ class ServiceApiSuppliers extends Component {
 
     }
 
+        // Ciclo de vida del componente
     componentDidMount() {
         console.log("Antes del componente");
         this.loadCustomers();

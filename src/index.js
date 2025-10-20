@@ -5,12 +5,15 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import ServicioApiCustomers from "./components/ServicioApiCustomers";
 import ServiceApiSuppliers from "./components/ServiceApiSuppliers";
+import EmpleadosDepartamento from "./components/empleadosdepartamento/EmpleadosDepartamento";
+import EmpleadosOficios from "./components/empleadosoficios/EmpleadosOficios";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-
-        // <ServicioApiCustomers/>
-        <ServiceApiSuppliers/>
+    // <ServicioApiCustomers/>
+    // <ServiceApiSuppliers/>
+    // <EmpleadosDepartamento/>
+    <EmpleadosOficios />,
 );
 
 // If you want to start measuring performance in your app, pass a function

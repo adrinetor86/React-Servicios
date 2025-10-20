@@ -1,8 +1,9 @@
 var Global={
     urlNortwind:"https://services.odata.org/V4/Northwind/Northwind.svc/",
     urlEmpleados:"https://apiempleadosspgs.azurewebsites.net/",
-    urlDepartamentos:"https://apicruddepartamentospgs.azurewebsites.net/"
-
+    urlDepartamentos:"https://apicruddepartamentospgs.azurewebsites.net/",
+    urlEmpleadosOficio:"https://apiempleadosspgs.azurewebsites.net/",
+    urlEjemplos:"https://apiejemplos.azurewebsites.net/"
 }
 
 export default Global;

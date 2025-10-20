@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import Global from "../Global";
-import '../styles/TableModern.css';
+
 
 class ServiceApiSuppliers extends Component {
     state={

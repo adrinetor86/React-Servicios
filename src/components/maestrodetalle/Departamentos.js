@@ -1,0 +1,64 @@
+import React, {Component} from 'react';
+import Empleados from "./Empleados";
+import Global from "../../Global";
+import axios from "axios";
+class Departamentos extends Component {
+
+    selectDepartamento = React.createRef()
+    url=Global.urlDepartamentos;
+
+    state={
+        departamentos:[],
+        idDepartamento:0
+    }
+
+    loadDepartamentos = () => {
+
+        let request = "webresources/departamentos"
+        axios.get(this.url + request).then((response) => {
+            console.log("Leyendo departamentos");
+            this.setState({
+                departamentos: response.data
+            })
+        })
+    };
+    componentDidMount=()=> {
+        this.loadDepartamentos();
+    }
+
+    buscarEmpleados=(event)=>{
+        event.preventDefault();
+        let idDepartamento=this.selectDepartamento.current.value;
+
+        this.setState({
+            idDepartamento:idDepartamento
+        })
+    }
+    render() {
+        return (
+            <div>
+                <h1 style={{color: "red"}}>Departamentos Component</h1>
+                <form >
+                    <select ref={this.selectDepartamento}>
+                        {
+                            this.state.departamentos.map((departamento,index)=>{
+                            return(<option key={index} value={departamento.numero}>{departamento.nombre}</option>)
+                            })
+                        }
+
+                    </select>
+                    <button onClick={this.buscarEmpleados}>
+                        Buscar Empleados
+                    </button>
+                </form>
+                {
+                    this.state.idDepartamento !== 0 &&
+                    <Empleados iddepartamento={this.state.idDepartamento}/>
+                }
+
+            </div>
+        );
+    }
+}
+
+export default Departamentos;

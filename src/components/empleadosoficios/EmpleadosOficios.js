@@ -11,6 +11,7 @@ class EmpleadosOficios extends Component {
     selectOficio=React.createRef();
     mostrarEmpleadosOficios = (event) => {
         event.preventDefault();
+
         let request="api/Empleados/EmpleadosOficio/"+this.selectOficio.current.value;
 
         axios.get(this.url+request).then((response) => {
@@ -35,7 +36,7 @@ class EmpleadosOficios extends Component {
                     arrayIds.push(oficio.oficio);
             }
             console.log(arrayIds);
-
+            //CREAMOS UN ARRAY CON EL CUAL FILTRA LOS PARAMETROS REPETIDOS
             let arrayUnico = [...new Set(arrayIds)];
 
             console.log(arrayUnico);

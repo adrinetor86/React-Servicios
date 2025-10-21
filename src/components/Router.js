@@ -4,6 +4,7 @@ import Home from "./Home";
 import NotFound from "./NotFound";
 import TablaMultiplicar from "./TablaMultiplicar";
 import Collatz from "./Collatz";
+import MenuRutas from "./MenuRutas";
 
 class Router extends Component {
     render() {
@@ -26,6 +27,7 @@ class Router extends Component {
 
         return (
            <BrowserRouter>
+               <MenuRutas/>
                <Routes>
                    <Route path="/" element={<Home/>}/>
                    <Route path="/tabla/:minumero" element={<TablaMultiplicarElement/>}/>

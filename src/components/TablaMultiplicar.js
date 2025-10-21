@@ -22,7 +22,17 @@ class TablaMultiplicar extends Component {
 
     componentDidMount(){
         this.generarTablaMultiplicar();
+
+
     }
+
+    componentDidUpdate(oldProps) {
+
+        if(this.props.numero !== oldProps.numero ){
+            this.generarTablaMultiplicar();
+        }
+    }
+
     render() {
         return (
             <div>

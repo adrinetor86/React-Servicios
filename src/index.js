@@ -6,7 +6,7 @@ import 'bootstrap/dist/js/bootstrap.bundle'
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './components/app/App';
 import reportWebVitals from './reportWebVitals';
 import ServicioApiCustomers from "./components/ServicioApiCustomers";
 import ServiceApiSuppliers from "./components/ServiceApiSuppliers";
@@ -17,6 +17,7 @@ import Cursos from "./components/ejemplocomunicacion/Cursos";
 import TablaMultiplicar from "./components/TablaMultiplicar";
 import Router from "./components/Router";
 import MenuRutas from "./components/MenuRutas";
+import HospitalesMultiples from "./components/hospitalesmultiples/HospitalesMultiples";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -26,10 +27,12 @@ root.render(
     // <EmpleadosOficios />
     //<Departamentos/>
     // <Cursos/>
-    <div>
-        {/*<MenuRutas/>*/}
-        <Router/>
-    </div>
+    // <div>
+    //     {/*<MenuRutas/>*/}
+    //     <Router/>
+    // </div>
+
+    <HospitalesMultiples/>
 
 );
 

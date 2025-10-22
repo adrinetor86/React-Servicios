@@ -1,3 +1,12 @@
+# Comandos para ejecutar
+
+  npm install --save react-router-dom \
+  npm install --save jquery popper.js \
+  npm install --save bootstrap \
+  npm install --save axios
+  
+  <img width="592" height="139" alt="image" src="https://github.com/user-attachments/assets/61e93851-fefd-4757-93e6-b19145e3ef88" />
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
